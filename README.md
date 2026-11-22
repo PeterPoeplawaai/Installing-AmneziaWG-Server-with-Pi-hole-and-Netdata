@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="wireguard-pihole-banner.png" alt="Banner" width="1000" />
+  <img src="amneziawg-pihole-banner.png" alt="Banner" width="1000" />
 </p>
 
 # AmneziaWG VPN with Pi-hole and Netdata for statistics (and n8n as a bonus :))
