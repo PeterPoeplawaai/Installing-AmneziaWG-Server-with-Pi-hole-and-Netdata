@@ -227,23 +227,11 @@ sudo awg show
 
 ### Manage clients
 
-Create one client per device, never share a profile between devices.
+> [!NOTE]
+> Create one client per device, never share a profile between devices.
 
-```bash
-sudo ./amneziawg-install.sh --add-client iphone
-sudo ./amneziawg-install.sh --add-client laptop
-sudo ./amneziawg-install.sh --list-clients
-sudo ./amneziawg-install.sh --remove-client iphone
-```
+Running `sudo ./amneziawg-install.sh` without arguments opens the interactive menu to add or remove clients, list all clients or revoke existing clients.
 
-Move a newly created profile to the home folder:
-
-```bash
-sudo mv /etc/amnezia/amneziawg/clients/awg0-client-laptop.conf ~/
-sudo chown ubuntu:ubuntu ~/awg0-client-laptop.conf
-```
-
-Running `sudo ./amneziawg-install.sh` without arguments opens the interactive menu to add or remove clients.
 
 ### Optional: web panel for managing clients
 
