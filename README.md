@@ -164,24 +164,14 @@ From [zachlagden/Pi-hole-Optimized-Blocklists](https://github.com/zachlagden/Pi-
 
 - https://media.githubusercontent.com/media/zachlagden/Pi-hole-Optimized-Blocklists/main/lists/all_domains.txt
 
-From ex-colleague Paulus1337 (thanks Paul! ;-)):
+Other generic lists:
 
 - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-- http://sysctl.org/cameleon/hosts
-- https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-- https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
-- https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
-- https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
-- https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 - https://nsfw.oisd.nl
 - https://big.oisd.nl
-- https://raw.githubusercontent.com/dashingdon/blocklists/refs/heads/master/pihole_addonblacklist.txt
 
 > [!NOTE]
 > A few things to keep in mind with this much blocklist:
-> - Many of these lists overlap. More lists mean a longer gravity update and more false positives, not necessarily more blocking.
-> - Some of the older lists (for example Cameleon and the `justdomains` lists) may be updated rarely or not at all. After `pihole -g`, check the status and domain count per list on the Lists page and remove lists that are dead.
-> - `http://sysctl.org/cameleon/hosts` is fetched over plain HTTP.
 > - `nsfw.oisd.nl` blocks adult content for every VPN client. Remove it if you don't want that.
 > - If a site breaks, check the Pi-hole Query Log and allow the domain from there.
 
