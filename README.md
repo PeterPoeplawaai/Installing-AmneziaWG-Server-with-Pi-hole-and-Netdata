@@ -559,6 +559,3 @@ docker compose down && docker compose up -d
 - [AmneziaWG protocol documentation](https://docs.amnezia.org/documentation/amnezia-wg) and [How to use the AmneziaWG app](https://docs.amnezia.org/documentation/instructions/use-amneziawg-app)
 - [WireSock Secure Connect documentation](https://wiresock.net/documentation/wiresock-secure-connect/how-to-setup.html)
 - [Pi-hole documentation](https://docs.pi-hole.net/), [Netdata](https://www.netdata.cloud/) and [n8n](https://n8n.io/)
-- Blocklists: see [Pi-hole extra blocklists](#pi-hole-extra-blocklists). Thanks Paul!
-
-*WireGuard is a registered trademark of Jason A. Donenfeld.*
