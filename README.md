@@ -246,6 +246,13 @@ sudo ./amneziawg-install.sh --list-clients
 sudo ./amneziawg-install.sh --remove-client iphone
 ```
 
+Move a newly created profile to the home folder:
+
+```bash
+sudo mv /etc/amnezia/amneziawg/clients/awg0-client-laptop.conf ~/
+sudo chown ubuntu:ubuntu ~/awg0-client-laptop.conf
+```
+
 Running `sudo ./amneziawg-install.sh` without arguments opens the interactive menu to add or remove clients.
 
 ### Optional: web panel for managing clients
