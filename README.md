@@ -189,9 +189,6 @@ From ex-colleague Paulus1337 (thanks Paul! ;-)):
 
 The [AmneziaWG Server Tools](https://wiresock.net/wiresock-awg-server-tools) (MIT license) install and manage an AmneziaWG server on Debian 11+ or Ubuntu 22.04+ (tested on 22.04, 24.04 and 26.04). One script installs the VPN, configures the server and writes the client configs. New installs use AWG 2.0.
 
-> [!NOTE]
-> Coming from the PiVPN/WireGuard version of this guide? Remove it first (`pivpn uninstall`), delete its old `wg0` firewall rules and create new client profiles. Old WireGuard profiles do not work with the AmneziaWG server.
-
 ### Run the installer
 
 ```bash
@@ -204,7 +201,7 @@ Answer the prompts like this (the wording can differ slightly):
 
 | Prompt | Answer |
 | --- | --- |
-| Public IP address or hostname | The **public** IP of your instance (or a DNS name). On Oracle Cloud the instance only knows its private address, so replace a suggested `10.x.x.x` |
+| Public IP address or hostname | The **public** IP of your instance. |
 | Public network interface | The default |
 | AmneziaWG interface name | `awg0` (default). The firewall rules from step 2 use this name |
 | Server IPv4 address | `10.66.66.1` (default). This is also the address of Pi-hole for VPN clients |
@@ -214,11 +211,19 @@ Answer the prompts like this (the wording can differ slightly):
 | Allowed IPs | The default `0.0.0.0/0,::/0` (all traffic through the VPN) |
 | First client name | For example `laptop` |
 
+> [!NOTE]
+> Accept all other defaults regarding specific connection parameters (like Jc, Jmin, Jmax, MTU, S1 etc.)
+
 Prefer a non-interactive install? The same answers as environment variables:
 
 ```bash
 sudo AUTO_INSTALL=y SERVER_PUB_IP=<your-public-ip> SERVER_PORT=51820 \
   CLIENT_DNS_1=10.66.66.1 CLIENT_DNS_2=10.66.66.1 ./amneziawg-install.sh
+```
+
+Now removing the blocking iptables FORWARD rule:
+```bash
+sudo iptables -D FORWARD 1
 ```
 
 Check that the server is running:
