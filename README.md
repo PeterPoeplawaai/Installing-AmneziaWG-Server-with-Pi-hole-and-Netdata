@@ -4,11 +4,18 @@
 
 # AmneziaWG VPN with Pi-hole and Netdata for statistics (and n8n as a bonus :))
 
+A clean, self-hosted setup combining **AmneziaWG** (DPI-resistant VPN obfuscation), **Pi-hole** (DNS-level ad, telemetry, and malware blocking), and **Netdata** (real-time host and network statistics)—designed for **Ubuntu 24.04 ARM64** and hardened so web dashboards stay bound to only the private VPN interface.
+
+### What’s Inside
+- **AmneziaWG:** WireGuard compatibility with traffic obfuscation to bypass deep packet inspection.
+- **Pi-hole:** Network-wide DNS filtering across all connected VPN clients.
+- **Netdata:** Live CPU, memory, bandwidth, and system health telemetry at a glance.
+- **Private-by-Default Exposure:** Admin UIs stay reachable over the VPN tunnel rather than exposed on public ports.
+
+**AmneziaWG**: WireGuard with traffic obfuscation, so it keeps working on networks that detect and block plain WireGuard. It is installed with the open-source [AmneziaWG Server Tools](https://wiresock.net/wiresock-awg-server-tools) by WireSock. Pi-hole blocks ads and trackers for every connected client and Netdata shows live server statistics. On the client side you use [WireSock Secure Connect](https://wiresock.net/wiresock-secure-connect/download) on Windows and the official AmneziaWG apps on Linux, macOS, iOS and Android.
+
 This runs completely free of charge on an Ubuntu 24.04 instance on Oracle Cloud Free Tier (shape `VM.Standard.A1.Flex`: 1 OCPU, 6 GB memory, 10 TB p/m free outbound internet traffic).
 
-The VPN is **AmneziaWG**: WireGuard with traffic obfuscation, so it keeps working on networks that detect and block plain WireGuard. It is installed with the open-source [AmneziaWG Server Tools](https://wiresock.net/wiresock-awg-server-tools) by WireSock. Pi-hole blocks ads and trackers for every connected client and Netdata shows live server statistics. On the client side you use [WireSock Secure Connect](https://wiresock.net/wiresock-secure-connect/download) on Windows and the official AmneziaWG apps on Linux, macOS, iOS and Android.
-
-The webpages for Pi-hole, Netdata and n8n are only reachable on connected VPN clients!
 
 ## Index
 
