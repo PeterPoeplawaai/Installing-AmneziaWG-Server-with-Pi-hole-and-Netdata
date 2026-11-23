@@ -16,7 +16,7 @@ A clean, self-hosted setup combining **AmneziaWG**, **Pi-hole** and **Netdata** 
 
 **AmneziaWG**: WireGuard with traffic obfuscation, so it keeps working on networks that detect and block plain WireGuard. It is installed with the open-source [AmneziaWG Server Tools](https://wiresock.net/wiresock-awg-server-tools) by WireSock. **Pi-hole** blocks ads and trackers for every connected client and **Netdata** shows live server statistics. On the client side you use [WireSock Secure Connect](https://wiresock.net/wiresock-secure-connect/download) on Windows and the official AmneziaWG apps on Linux, macOS, iOS and Android.
 
-This runs completely free of charge on an Ubuntu 24.04 instance on Oracle Cloud Free Tier (shape `VM.Standard.A1.Flex`: 1 OCPU, 6 GB memory, 10 TB p/m free outbound internet traffic).
+This runs completely free of charge on an Ubuntu 24.04 instance on Oracle Cloud Free Tier (shape `VM.Standard.A1.Flex`: 1 OCPU, 6 GB memory, 10 TB p/m free outbound internet traffic). But you can use any other.
 
 
 ## Index
