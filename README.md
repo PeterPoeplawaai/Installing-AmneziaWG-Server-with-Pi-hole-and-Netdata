@@ -160,7 +160,7 @@ sudo netfilter-persistent save   # make your iptables rules persistent across re
 
 ### Pi-hole extra blocklists
 
-Add them in the Pi-hole admin page under **Lists** (Adlists), then run **Tools > Update Gravity** (or `pihole -g` on the server).
+When Step 3 is completed and you're connected through VPN, the Pi-hole admin page becomes available outside your Putty terminal (http://<private-ip-address-instance> Login and add the extra blocklists under **Lists** (Adlists), then run **Tools > Update Gravity** (or `pihole -g` on the server).
 
 From [blog.burstbytes.com.au](https://blog.burstbytes.com.au/best-2026-pi-hole-blocklists-and-how-to-install-them/#How_to_install_a_Pi-hole_blocklist):
 
@@ -180,7 +180,7 @@ Other generic lists:
 - https://big.oisd.nl
 
 > [!NOTE]
-> A few things to keep in mind with this much blocklist:
+> A few things to keep in mind:
 > - `nsfw.oisd.nl` blocks adult content for every VPN client. Remove it if you don't want that.
 > - If a site breaks, check the Pi-hole Query Log and allow the domain from there.
 
