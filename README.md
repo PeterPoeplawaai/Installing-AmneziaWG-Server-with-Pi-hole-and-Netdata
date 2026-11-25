@@ -220,7 +220,8 @@ sudo AUTO_INSTALL=y SERVER_PUB_IP=<your-public-ip> SERVER_PORT=51820 \
   CLIENT_DNS_1=10.66.66.1 CLIENT_DNS_2=10.66.66.1 ./amneziawg-install.sh
 ```
 
-Now removing the blocking iptables FORWARD rule:
+CLients could connect to the AmneziaWG server now, but won't have internet access yet. Remove the blocking iptables FORWARD rule to solve this:
+
 ```bash
 sudo iptables -D FORWARD 1
 ```
